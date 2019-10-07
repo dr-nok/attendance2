@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="#FFF3E0">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="0dp">
+        <EditText
+            android:id="@+id/user"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="NIP18"
+            android:inputType="textEmailAddress"
+            android:maxLength="18" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:text="Kantor tujuan :"/>
+            <Spinner
+                android:id="@+id/kantorTujuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:entries="@array/kantorTujuan"></Spinner>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#d67601"
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Koord x device = "
+            android:textColor="#000000"
+            android:textSize="16dp" />
+
+        <TextView
+            android:text="Koord y device = "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textView2"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true" />
+
+
+
+        <Button
+            android:text="Aktifkan GPS"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#d67601"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:id="@+id/button"
+            android:textColor="#fff"/>
+
+        <Button
+            android:text="Mulai proses presensi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#d67601"
+            android:layout_below="@+id/button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:id="@+id/button2"
+            android:textColor="#fff"/>
+
+
+
+        <TextView
+            android:text="Koord kantor = "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/koord_x_kantor"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_below="@+id/text_view_result"
+            android:layout_centerHorizontal="true" />
+
+        <!--<TextView
+            android:text="Koord y kantor ="
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/koord_y_kantor"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_below="@+id/koord_x_kantor"
+            android:layout_centerHorizontal="true" />-->
+
+        <TextView
+            android:text="Ketentuan radius = "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/min_distance"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_below="@+id/koord_y_kantor"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="Jarak device ke kantor tujuan = "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/comp_distance"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_below="@+id/min_distance"
+            android:layout_centerHorizontal="true" />
+
+        <!--<TextView
+            android:text="NIP = "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/text_nip_server"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_below="@+id/comp_distance"
+            android:layout_centerHorizontal="true" /> -->
+
+        <TextView
+            android:text="Hasil = "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/text_view_result"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+</RelativeLayout>

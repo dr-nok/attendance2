@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Attendance</string>
+    <string name="radio_pku">Pusdiklat KU</string>
+    <string name="radio_kantorku">Kantor KU</string>
+    <string name="myDomain">some-domain</string>
+    <string-array name="kantorTujuan">
+        <item>pku</item>
+        <item>kantorku</item>
+    </string-array>
+
+
+</resources>
